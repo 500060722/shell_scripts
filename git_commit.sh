@@ -37,11 +37,13 @@ then
 				git commit -m "$message"
 				echo "Checking whether you had added remote origin"
 				git remote show origin
-				read -e -p "Is it showing FETCH URL's and PUSH URL's?(Y/y)" fp
+				read -e -p "Is it showing FETCH URL's and PUSH URL's?(Y/n)" fp
 				if [ $fp == "Y" ] || [ $fp == "y" ]
 				then
 					echo "Pushing your changes....into master branch"
 					git push -u origin master
+					echo "Pushed your changes into your remote URL's kindly have a look"
+					echo "Exiting the script......Thank you."
 				else
 					echo "Then first add your origin address(URL's)"
 					read address
@@ -49,6 +51,7 @@ then
 					echo "Pushing your changes...."
 					git push -u origin master
 					echo "Pushed.....Your changes into $address.Kindlly have a look over that"
+					echo "Exiting the script.......Thank you."
 				fi
 			else
 				echo "There is nothing to commit. First make changes in your repository"
