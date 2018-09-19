@@ -2,10 +2,10 @@
 echo "Welcome to Git commiting script. This script will automatically place
 commits in your remote repository. So let's start....?? Do you want to continue?(Y/n)"
 read choice
-if [ $choice == "Y"] || [ $choice == "y" ]
+if [ $choice == "Y" ] || [ $choice == "y" ]
 then
 	echo "1->Initialize a git repository
-	2->Push all the files(If repository already initialized)
+2->Push all the files(If repository already initialized)
 	"
 	read num1
 	case $num1 in
