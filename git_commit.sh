@@ -11,10 +11,18 @@ then
 	case $num1 in
 		1) echo"Initializing the git repository in folder."
 			git init
+			echo "Running Status...."
+			sleep 2s
 			git status
+			echo "Adding Your files....."
 			git add .
+			sleep 2s
+			echo "Added......."
+			sleep 2s
 			echo "Enter your commiting message."
 			read message
+			echo "Creating nodes....."
+			sleep 2s
 			git commit -m "$message"
 			echo "Enter remote origin address."
 			read address
@@ -30,13 +38,19 @@ then
 			if [ $ch == "Y" ] || [ $ch == "y" ]
 			then
 				echo "Adding all the files"
+				sleep 2s
 				git add .
+				echo "Added...."
 				echo "Enter your commiting message"
 				read message
-				echo "Creating nodes..."
+				echo "Creating modes..."
 				git commit -m "$message"
+				sleep 2s
+				echo "Created....."
+				sleep 2s
 				echo "Checking whether you had added remote origin"
 				git remote show origin
+				sleep 2s
 				read -e -p "Is it showing FETCH URL's and PUSH URL's?(Y/n)" fp
 				if [ $fp == "Y" ] || [ $fp == "y" ]
 				then
